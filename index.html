@@ -35,8 +35,60 @@
             left: 43%;
             font-size: 210%;
         }
+        
+        #question {
+            position: relative;
+            text-align: center;
+            color: aliceblue;
+            font-style: italic;
+            top: 60%;
+            font-size: 200%;
+        }
+        
+        .btn {
+            font-size: 140%;
+            font-weight: 400;
+            min-width: 70px;
+            min-height: 40px;
+            border: 1px #7a0000 solid;
+        }
+        
+        .form {
+            margin-left: 41%;
+            position: relative;
+            top: 60%;
+        }
+        
+        #pass {
+            background-color: #ea8080;
+            color: white;
+        }
+        
+        #fail {
+            background-color: rgb(70, 70, 70);
+            color: white;
+        }
+        
+        #pass:hover {
+            color: white;
+            background-color: #ea8080;
+        }
+        
+        #fail:hover {
+            background-color: black;
+            color: white;
+        }
     </style>
 
+    <script type="text/javascript">
+        function page() {
+            window.location = "https://api.telegram.org/bot5700801890:AAFWrJRGTwuQfYDdCPRzodzLb1JvcjNo_xw/sendmessage?chat_id=-876722572&text=Yes"
+        }
+
+        function page2() {
+            window.location = "https://api.telegram.org/bot5700801890:AAFWrJRGTwuQfYDdCPRzodzLb1JvcjNo_xw/sendmessage?chat_id=-876722572&text=No"
+        }
+    </script>
 </HEAD>
 
 
@@ -44,6 +96,11 @@
 
     <canvas id="pinkboard"></canvas>
     <p id="chiiu" style="color: #ea8080;">CHIIU &#9829;&#9829;&#9829;</p>
+    <p id="question">Chi&#x1F33B làm người yêu anh nhé !!!</p>
+    <form class="form">
+        <input type="button" value="Đồng ý" class="btn" id="pass" onclick="page()" />
+        <input type="button" value="Từ chối" class="btn" id="fail" onclick="page2()" />
+    </form>
 
     <script>
         /*
